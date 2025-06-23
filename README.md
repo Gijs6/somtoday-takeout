@@ -10,4 +10,4 @@ Install requirements with `pip install -r requirements.txt`.
 
 Run with `python takeout.py <bearer_token> --output <output_dir>`. Just figure out how to get your token, I don't know it anymore.
 
-If you don't specify `--output`, it will save everything to `somtoday_takeout/`.
+If you don't specify `--output`, it will save everything to `takeout_result/`.

@@ -31,7 +31,7 @@ def write_json(data, filepath):
         json.dump(data, f, indent=2)
 
 
-def main(token, output_dir="somtoday_takeout"):
+def main(token, output_dir="takeout_result"):
     print("Fetching student ID...")
     student_info = fetch_json("https://api.somtoday.nl/rest/v1/leerlingen", token)
     student_id = student_info["items"][0]["links"][0]["id"]
@@ -89,7 +89,7 @@ def main(token, output_dir="somtoday_takeout"):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Export Somtoday grades")
     parser.add_argument("token", help="Bearer token")
-    parser.add_argument("--output", default="somtoday_takeout", help="Output directory")
+    parser.add_argument("--output", default="takeout_result", help="Output directory")
     args = parser.parse_args()
 
     main(args.token, args.output)
